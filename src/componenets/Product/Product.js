@@ -1,13 +1,8 @@
 import './Product.css';
 import {FaChevronCircleLeft} from 'react-icons/fa';
-import { useState } from 'react';
 
 const Product = ({product, currentProduct}) => {
-    const [open, setOpen] = useState(false);
 
-    const rotate = () => {
-
-    }
     return (
         <>
             <div className='single-product'>

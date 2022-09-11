@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Product from "./componenets/Product/Product";
 import "./App.css";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [currentProduct, setCurrentProduct] = useState(null);
+  const scrollRef = useRef(null);
+  const executeScroll = () => scrollRef.current.scrollIntoView()
 
   useEffect(() => {
     const getProducts = async () => {
@@ -20,15 +22,10 @@ function App() {
     if(currentProduct && product.id === currentProduct.id){
       setCurrentProduct(null);
     }else{
+      executeScroll();
       setCurrentProduct(product);
     }
   }
-  // useEffect(() => {
-  //   setCurrentProduct(products[0]);
-  // }, [products]);
-
-  console.log(products);
-  console.log(currentProduct)
 
   return (
     <div className="home-cont">
@@ -54,22 +51,20 @@ function App() {
             );
           })}
         </div>
-        {currentProduct &&
-        <div className="product-desc">
-          <div className="desc-cont">
-            <div className="description-cont">
-              <div>${currentProduct?.price}</div>
-              <div>{currentProduct?.description}</div>
-              <div>
+        <div className={currentProduct ? 'product-desc' : 'product-desc hide'}>
+          <div ref={scrollRef} className="desc-cont">
+            <div className="product-info">
+              <div className="price-rating">${currentProduct?.price}</div>
+              <p>{currentProduct?.description}</p>
+              <div className="price-rating">
                 {currentProduct?.rating.rate} ({currentProduct?.rating.count})
               </div>
             </div>
             <div className="add-cart">
-            <button>add to cart</button>
+            <button className="submit-btn" type="submit">Add to cart</button>
             </div>
           </div>
         </div>
-        }
       </div>
     </div>
   );
