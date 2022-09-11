@@ -38,6 +38,7 @@ function App() {
         </p>
       </div>
       <div className="item-cont">
+        {products.length > 0 ?
         <div className="flex-products">
           {products?.map((product, idx) => {
             return (
@@ -51,6 +52,7 @@ function App() {
             );
           })}
         </div>
+        : <div className="loading">Please wait while your products load...</div> }
         <div className={currentProduct ? 'product-desc' : 'product-desc hide'}>
           <div ref={scrollRef} className="desc-cont">
             <div className="product-info">
