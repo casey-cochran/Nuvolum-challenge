@@ -1,0 +1,42 @@
+
+.product-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+img{
+    width: 100px;
+    height: 125px;
+}
+
+.chevron{
+    overflow: visible;
+    font-size: 50px;
+    color: rgb(249, 246, 246);
+    background-color: rgb(38, 176, 176);
+    border: 1px solid rgb(38, 176, 176);
+    border-radius: 50px;
+    transform: rotate(0deg);
+    transition: transform 1s linear, background-color 1s ease-in-out, color 1s ease-in-out;
+
+}
+
+.chevron.down{
+    transform: rotate(180deg);
+    background-color: rgb(249, 246, 246);
+    color:rgb(38, 176, 176);
+    transition: transform 1s linear, background-color 1s ease-in-out, color 1s ease-in-out;
+  }
+
+
+.test{
+    width: 100%;
+    text-align: center;
+}
+
+.single-product{
+    display: flex;
+    width: 100%;
+}

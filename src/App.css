@@ -1,0 +1,87 @@
+.home-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    min-height: 100vh;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(249, 246, 246);
+}
+
+.heading-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding-bottom: 45px;
+    margin: 0;
+}
+
+.heading-cont > h1{
+    margin-bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 0;
+}
+
+.product-cont{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.item-cont{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 45px;
+    width: 90%;
+}
+
+.flex-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.product-desc{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex:1;
+    min-height: 90vh;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.desc-cont{
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    margin-top: 0;
+}
+
+.description-cont{
+    height: 50%;
+}
+
+.description-cont > div{
+ padding: 7px;
+}
+
+.add-cart{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50%;
+}
+
+.add-cart > button {
+    margin-bottom: 40px;
+}

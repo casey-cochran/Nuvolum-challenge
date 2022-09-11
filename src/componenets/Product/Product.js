@@ -1,12 +1,27 @@
+import './Product.css';
+import {FaChevronCircleLeft} from 'react-icons/fa';
+import { useState } from 'react';
 
+const Product = ({product, currentProduct}) => {
+    const [open, setOpen] = useState(false);
 
-const Product = ({product}) => {
-    console.log(product, 'in product')
+    const rotate = () => {
 
+    }
     return (
-        <div>
-            hello product
-        </div>
+        <>
+            <div className='single-product'>
+                <div>
+                    <img src={product.image} alt="" />
+                </div>
+                <div className='test'>
+                    <h3 >{product.title}</h3>
+                </div>
+                <div>
+                <FaChevronCircleLeft className={currentProduct ? 'chevron down' : 'chevron'} />
+                </div>
+            </div>
+        </>
     )
 }
 
