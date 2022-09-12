@@ -5,7 +5,7 @@ const Product = ({ product, currentProduct }) => {
   return (
       <div className="single-product">
         <div>
-          <img src={product.image} alt={product.title} />
+          <img src={product.image} alt="Image of product listing" />
         </div>
         <div className="product-title">
           <h3>{product.title}</h3>
