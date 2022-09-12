@@ -19,6 +19,8 @@ Given the task of only representing a page that shows a list of products and bei
 
 I chose to utilize Flexbox rather than Grid given that there did not seem to be many differing parts of each product. I felt that utilizing Flexbox would take less development time for this task. 
 
+I incorporated axios rather than fetch due to its ability to handle errors more efficiently. 
+
 # Resources utilized
 
 I mostly relied on google and stack overflow to find the answers I needed as well as css-tricks. 
