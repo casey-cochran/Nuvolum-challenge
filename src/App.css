@@ -23,7 +23,6 @@
 
 .heading-cont > h1 {
   margin-bottom: 0;
-  padding-top: 25px;
   padding-bottom: 0;
 }
 
@@ -53,7 +52,7 @@
   justify-content: center;
   gap: 15px;
   flex: 1;
-  transition: flex 2s ease-in-out;
+  transition: flex 1s ease-in-out;
 }
 
 .product-desc {
@@ -64,11 +63,11 @@
   height: 30%;
   background-color: white;
   border-radius: 10px;
-  animation: fadeInAnimation 0.5s ease-in-out;
+  animation: fadeInAnimation 0.3s ease-in-out;
 }
 
 .product-desc.hide {
-  animation: fadeOut 0.5s ease-in-out;
+  animation: fadeOut 0.3s ease-in-out;
   visibility: hidden;
   flex: 0;
   width: 0;
@@ -154,6 +153,7 @@
     font-size: 20px;
     font-weight: bold;
 }
+
 
 
 @media (max-width: 600px) {
