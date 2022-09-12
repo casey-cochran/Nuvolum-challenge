@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Product from "./componenets/Product/Product";
+import axios from "axios";
 import "./App.css";
 
 function App() {
@@ -13,13 +14,16 @@ function App() {
     //Fetch products on page load
     const getProducts = async () => {
       try {
-        const response = await fetch(
+        const response = await axios.get(
           "https://fakestoreapi.com/products?limit=5"
         );
-        const data = await response.json();
-        setProducts([...products, ...data]);
+        setProducts([...products, ...response.data]);
       } catch (err) {
         //Can set errors returned here in useState and display formatted error to users
+        const newErrors = [
+          "Unable to retreive data at this time, please check your request",
+        ];
+        setErrors([...errors, ...newErrors]);
       }
     };
     getProducts();
@@ -47,7 +51,6 @@ function App() {
           quis magnam?
         </p>
       </div>
-      {/* Could render errors here if there is no data returned from fetch call */}
       <div className="item-cont">
         {products.length > 0 ? (
           <div className="flex-products">
@@ -67,6 +70,12 @@ function App() {
               );
             })}
           </div>
+        ) : errors.length > 0 ? (
+          errors.map((error, i) => (
+            <div key={i} className="loading">
+              {error}
+            </div>
+          ))
         ) : (
           <div className="loading">Please wait while your products load...</div>
         )}
