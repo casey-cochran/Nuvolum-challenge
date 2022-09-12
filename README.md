@@ -2,6 +2,10 @@
 
 In this project I was given a mockup and a ticket with a set of defined tasks to complete. I built the project closely to the mockup but with a few design changes that I incorporated to try and be more appealing. To accomplish this task I utilized create-react-app along with pure CSS without any packages to help with styling.
 
+# Application speed
+
+* Currently this project scores a 96 on both mobile and desktop according to PageSpeed Insights
+
 # Challenges
 
 * Styling and trying to incorporate smooth animations proved to be much more difficult than I had thought. 
