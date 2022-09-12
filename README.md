@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Novulum project challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project I was given a mockup and a ticket with a set of defined tasks to complete. I built the project closely to the mockup but with a few design changes that I incorporated to try and be more appealing. To accomplish this task I utilized create-react-app along with pure CSS without any packages to help with styling.
 
-## Available Scripts
+# Challenges
 
-In the project directory, you can run:
+* Styling and trying to incorporate smooth animations proved to be much more difficult than I had thought. 
+* I ran into a blocker to decide how to show a products details to take up half of the page rather than pushing all other products down below when its details container opened. 
+* Creating app responsiveness for mobile and tablet. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Planning
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Given the task of only representing a page that shows a list of products and being able to view their details, I only added one component in the ./src/components. I split the prodcut details into two so that I could accomplish the task of rending each product, and when a product is clicked on, it will render its details to the right without affect the layout of other products. 
 
-### `npm test`
+I chose to utilize Flexbox rather than Grid given that there did not seem to be many differing parts of each product. I felt that utilizing Flexbox would take less development time for this task. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Resources utilized
 
-### `npm run build`
+I mostly relied on google and stack overflow to find the answers I needed as well as css-tricks. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# What I Learned
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I feel that I definitely learned more about containers and how to utilize Flexbox and height to be more responsive. I have not had much practice with @keyframes, animations, and media-queries. Learning the basics of these and being able to incorporate them was very benficial, considering how much of a difference having a smooth application makes. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
