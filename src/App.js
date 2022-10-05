@@ -41,6 +41,29 @@ function App() {
     }
   };
 
+  //need a button to sort from low to high based upon price, two other options with rating
+  //a select dropdown button
+  const [selectSort, setSelectSort] = useState('');
+
+  const sortProducts = (sortValue) => {
+    if(sortValue === 'price-low'){
+      const sorted = products.sort((a,b) => a.price - b.price)
+      return setProducts([...sorted])
+    }else if(sortValue === 'price-high'){
+      const sorted = products.sort((a,b) => b.price - a.price)
+      return setProducts([...sorted])
+
+    }else if(sortValue === 'rating-low'){
+      const sorted = products.sort((a,b) => a.rating.rate - b.rating.rate)
+      return setProducts([...sorted])
+    }else if (sortValue === 'rating-high'){
+      const sorted = products.sort((a,b) => b.rating.rate - a.rating.rate)
+      return setProducts([...sorted])
+    }
+  }
+
+
+  console.log(products)
   return (
     <div className="home-cont">
       <div className="heading-cont">
@@ -50,6 +73,12 @@ function App() {
           architecto neque illum eius error, totam mollitia reiciendis officiis
           quis magnam?
         </p>
+        <select onChange={(e) => sortProducts(e.target.value)}>
+          <option key={1} value='price-low'>Price low to high</option>
+          <option key={2} value='price-high'>Price high to low</option>
+          <option key={3} value='rating-low'>Rating low to high</option>
+          <option key={4} value='rating-high'>Rating high to low</option>
+        </select>
       </div>
       <div className="item-cont">
         {products.length > 0 ? (
@@ -63,7 +92,6 @@ function App() {
                 >
                   <Product
                     product={product}
-                    key={product.id}
                     currentProduct={currentProduct?.id === product.id}
                   />
                 </div>
